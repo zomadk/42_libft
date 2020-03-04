@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/22 21:21:06 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 18:54:58 by zmaduekw         ###   ########.fr       */
+/*   Created: 2020/02/28 16:48:28 by zmaduekw          #+#    #+#             */
+/*   Updated: 2020/03/02 19:24:21 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	write(1, &c, 1);
+	int		i;
+	char	*space;
+
+	i = 0;
+	if (!(space = malloc(sizeof(char) * ft_strlen(f(s) + 1))))
+		return (NULL);
+	while (*s)
+	{
+		space[i] = f(s);
+		s++;
+		i++;
+	}
+	space[i] = '\0';
+	return (space);
 }

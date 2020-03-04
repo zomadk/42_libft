@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 11:08:54 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/02/21 17:20:59 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/02 19:22:49 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,3 @@ int		ft_strlen(const char *s)
 	}
 	return (i);
 }
-
-
-int 	main(void)
-{
-	char arrau[] = "string here";
-	char *str;
-	str = arrau;
-
-	printf("%d", ft_strlen(arrau));
-}
-

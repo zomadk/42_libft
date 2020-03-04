@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 23:20:27 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/02/24 23:39:45 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/02 18:56:43 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	ft_putendl(char *s)
 {
-	int pos;
-	unsigned char *ptr;
+	int				pos;
+	unsigned char	*ptr;
 
 	pos = 0;
 	ptr = (unsigned char*)s;
@@ -26,10 +26,4 @@ void	ft_putendl(char *s)
 		pos++;
 	}
 	write(1, "\n", 1);
-}
-
-int		main()
-{
-	char arr[] = "hey";
-	ft_putendl(arr);
 }

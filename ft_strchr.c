@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 10:27:01 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/02/24 15:46:37 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/02 19:04:07 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return (NULL);
 	return (0);
 }
-
-int		main()
-{
-	char array[] = "arrayhe1zel1op";
-	
-	printf("%s", ft_strchr(array, '1'));
-}
-

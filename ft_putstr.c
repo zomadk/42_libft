@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 21:27:39 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/02/24 23:19:38 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/02 18:59:29 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,4 @@ void	ft_putstr(char *str)
 		ft_putchar(str[pos]);
 		pos++;
 	}
-}
-
-int		main()
-{
-	char arr[] = "hey";
-	ft_putstr(arr);
 }

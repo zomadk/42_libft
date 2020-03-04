@@ -1,18 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/22 21:21:06 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 18:54:58 by zmaduekw         ###   ########.fr       */
+/*   Created: 2020/02/27 19:13:19 by zmaduekw          #+#    #+#             */
+/*   Updated: 2020/03/02 19:21:26 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+size_t		countlen(const char *s)
 {
-	write(1, &c, 1);
+	size_t i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t			n;
+	size_t			len;
+	unsigned int	i;
+	unsigned int	b;
+
+	i = 0;
+	b = 0;
+	while (dst[i] != '\0')
+		++i;
+	while (src[b] != '\0' && b < dstsize)
+	{
+		dst[i] = src[b];
+		i++;
+		b++;
+	}
+	dst[i] = '\0';
+	len = countlen(dst);
+	return (len);
 }

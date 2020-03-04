@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   supply_functions.h                                 :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/26 22:41:16 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/02/24 23:41:02 by zmaduekw         ###   ########.fr       */
+/*   Created: 2020/02/25 16:42:16 by zmaduekw          #+#    #+#             */
+/*   Updated: 2020/03/02 19:04:47 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPPLY_FUNCTIONS_H
-# define SUPPLY_FUNCTIONS_H
+#include "libft.h"
 
-void	ft_putchar(char c);
+void	ft_strclr(char *s)
+{
+	int i;
 
-#endif
+	i = 0;
+	while (s[i])
+	{
+		s[i] = '\0';
+		i++;
+	}
+}

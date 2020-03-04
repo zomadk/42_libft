@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/22 21:21:06 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 18:54:58 by zmaduekw         ###   ########.fr       */
+/*   Created: 2020/02/25 22:28:12 by zmaduekw          #+#    #+#             */
+/*   Updated: 2020/03/02 18:56:51 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_putnbr(int n)
 {
-	write(1, &c, 1);
+	if (n < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(-n);
+	}
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else if (n >= 0 && n <= 9)
+		ft_putchar(n + '0');
 }

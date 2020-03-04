@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_wordlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/22 21:21:06 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 18:54:58 by zmaduekw         ###   ########.fr       */
+/*   Created: 2020/03/02 11:38:33 by zmaduekw          #+#    #+#             */
+/*   Updated: 2020/03/02 19:51:04 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+size_t		wordlen(char *str, char b)
 {
-	write(1, &c, 1);
+	size_t i;
+
+	i = 0;
+	if (str[0] == b)
+		i++;
+	while (str[i] && str[i] != b)
+		i++;
+	return (i);
 }

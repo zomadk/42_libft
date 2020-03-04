@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   supply_functions.c                                 :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/26 22:39:39 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/02/24 23:40:34 by zmaduekw         ###   ########.fr       */
+/*   Created: 2020/02/25 18:49:13 by zmaduekw          #+#    #+#             */
+/*   Updated: 2020/03/02 19:11:38 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "supply_functions.h"
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	write(1, &c, 1);
+	while (*s)
+	{
+		f(s);
+		s++;
+	}
 }
-

@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 16:55:19 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/02/22 17:16:22 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/02 19:27:16 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,3 @@ char	*ft_strncat(char *dst, const char *src, size_t n)
 	dst[i] = '\0';
 	return (dst);
 }
-
-int		main()
-{
-	char dst[] = "hey";
-	char src[] = "byelmnap";
-	size_t num = 3;
-
-	printf("%s", ft_strncat(dst, src, num));
-	return 0;
-}
-
-
-

@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 17:52:45 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/06 14:59:56 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/09 14:18:47 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	unsigned int b;
 
 	b = 0;
-	if (!*to_find)
+	if (!(*to_find))
 		return ((char*)str);
 	pos = 0;
 	while (str[pos] != '\0' && (size_t)b < len)
@@ -35,7 +35,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 				++i;
 			}
 			if (to_find[i] == '\0')
-				return ((char*)to_find);
+				return ((char*)str);
 		}
 		++pos;
 	}

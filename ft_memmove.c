@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 14:54:29 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/09 11:32:38 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/09 12:21:32 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			dest[len - count] = srcc[len - count];
 		}
 		else
+		{
 			while (len-- > 0)
 				*(dest++) = *(src++);
+		}
+	}
 	return (dst);
 }

@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 13:19:58 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/06 15:47:29 by zmaduekw         ###   ########.fr       */
+/*   Created: 2020/03/04 14:19:01 by zmaduekw          #+#    #+#             */
+/*   Updated: 2020/03/04 14:39:22 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(const char *s1, const char *s2)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	const char *new;
-	const char *new2;
-	int i;
+	int pos;
 
-	new = s1;
-	new2 = s2;
-	i = 0;
-	while (new != '\0' && new2 != '\0' && (new = new2))
+	pos = 0;
+	while (s[pos] != '\0')
 	{
-		new++;
-		new2++;
+		write(fd, &s[pos], 1);
+		pos++;
 	}
-	if (new == new2)
-		return (1);
-	else
-		return (0);
+	write(fd, "\n", 1);
 }

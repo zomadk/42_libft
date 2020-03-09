@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 17:52:45 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 19:36:30 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/06 14:59:56 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,5 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		}
 		++pos;
 	}
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 15:35:24 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 19:18:54 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/06 15:15:06 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
 	int		b;
-	int		len;
 	char	*new;
 
 	i = 0;

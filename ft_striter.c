@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 18:49:13 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 19:11:38 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/09 10:34:00 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	while (*s)
+	char *new;
+
+	new = s;
+	while (*new)
 	{
-		f(s);
-		s++;
+		f(new);
+		new++;
 	}
 }

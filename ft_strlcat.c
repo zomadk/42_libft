@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 19:13:19 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 19:21:26 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/06 14:57:33 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ size_t		countlen(const char *s)
 
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t			n;
 	size_t			len;
 	unsigned int	i;
 	unsigned int	b;

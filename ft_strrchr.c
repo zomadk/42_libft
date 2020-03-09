@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:26:59 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 19:44:38 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/09 11:34:12 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ char	*ft_strrchr(const char *s, int c)
 	if (last_char)
 		return (last_char);
 	if (c == '\0')
-		return (NULL);
+		return ((char*)s);
 	return (0);
 }

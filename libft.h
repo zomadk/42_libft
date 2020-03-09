@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 19:35:07 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 21:29:56 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/06 15:31:36 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,14 @@
 
 int		ft_atoi(const char *str);
 int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strlen(const char *s);
 int		ft_isalnum(int c);
 int		ft_isprint(int c);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_toupper(int c);
-int		ft_lower(int c);
+int		ft_tolower(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -35,7 +36,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 char	*ft_strstr(const char *str, const char *to_find);
 char	*ft_strncpy(char *dst, char *src, size_t len);
-char	*ft_strcpy(char *dst, char *src);
+char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strdup(const char *s1);
 char	*ft_strcat(char *dst, const char *src);
 char	*ft_strncat(char *dst, const char *src, size_t n);
@@ -49,8 +50,9 @@ void	*ft_memset(void *b, int c, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 int		ft_strequ(const char *s1, const char *s2);
+int		ft_strnequ(const char *s1, const char *s2, size_t n);
 char	*ft_itoa(int n);
-char	*strnew(size_t size);
+char	*ft_strnew(size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -65,7 +67,8 @@ void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr(char *str);
 void	ft_putstr_fd(char *str, int fd);
-void	ft_putendl(char *s);
+void	ft_putendl(char const *s);
+void	ft_putendl_fd(char const *s, int fd);
 void	ft_strclr(char *s);
 void	ft_strdel(char **as);
 void	ft_striter(char *s, void (*f)(char *));

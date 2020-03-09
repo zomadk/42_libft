@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 16:48:28 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 19:24:21 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/06 15:15:17 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*space;
 
 	i = 0;
-	if (!(space = malloc(sizeof(char) * ft_strlen(f(s) + 1))))
+	if (!(space = malloc(sizeof(char) * ft_strlen((char *)s) + 1)))
 		return (NULL);
 	while (*s)
 	{
-		space[i] = f(s);
+		space[i] = f(*(s));
 		s++;
 		i++;
 	}

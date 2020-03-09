@@ -6,14 +6,13 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 23:20:27 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 18:56:43 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/06 15:16:47 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "supply_functions.h"
 
-void	ft_putendl(char *s)
+void	ft_putendl(char const *s)
 {
 	int				pos;
 	unsigned char	*ptr;

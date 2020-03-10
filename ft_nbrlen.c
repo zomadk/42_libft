@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/21 19:42:19 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/09 18:59:21 by zmaduekw         ###   ########.fr       */
+/*   Created: 2020/03/09 19:54:04 by zmaduekw          #+#    #+#             */
+/*   Updated: 2020/03/09 20:05:03 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+size_t	ft_nbrlen(int n)
 {
-	int					i;
-	unsigned char		*dest;
-	const unsigned char	*srcc;
+	int	len;
 
-	i = 0;
-	dest = (unsigned char*)dst;
-	srcc = (unsigned char*)src;
-	while (n-- > 0)
+	len = 0;
+	if (n == 0)
+		return (1);
+	if (n < len)
+		len++;
+	while (n != 0)
 	{
-		dest[i] = srcc[i];
-		i++;
+		n /= 10;
+		len++;
 	}
-	return (dst);
+	return (len);
 }

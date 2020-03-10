@@ -6,7 +6,7 @@
 #    By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/06 14:36:15 by zmaduekw          #+#    #+#              #
-#    Updated: 2020/03/09 10:28:01 by zmaduekw         ###   ########.fr        #
+#    Updated: 2020/03/09 19:59:47 by zmaduekw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ SRCS	= ft_memset.c ft_bzero.c	\
 		  ft_strsplit.c ft_itoa.c ft_putchar.c		\
 		  ft_putstr.c ft_putendl.c ft_putnbr.c		\
 		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c	\
-		  ft_putnbr_fd.c	
+		  ft_putnbr_fd.c ft_nbrlen.c 
 
 OBJS	= $(SRCS:.c=.o)
 

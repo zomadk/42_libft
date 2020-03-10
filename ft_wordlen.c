@@ -6,20 +6,23 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 11:38:33 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 19:51:04 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/09 20:57:09 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		wordlen(char *str, char b)
+size_t	ft_wordlen(char const *str, char b)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	if (str[0] == b)
+	while (*str == b)
+		str++;
+	while (*str && *str != b)
+	{
+		str++;
 		i++;
-	while (str[i] && str[i] != b)
-		i++;
+	}
 	return (i);
 }

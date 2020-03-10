@@ -6,7 +6,7 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 19:35:07 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/09 20:01:09 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/03/09 21:00:04 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,10 @@ void	ft_strdel(char **as);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
+int		ft_wordcount(char const *str, char b);
+int		ft_is_blank(char c);
+char	*ft_checker(char *spot, int n, int len, int i);
+size_t	ft_wordlen(char const *str, char b);
 size_t	ft_nbrlen(int n);
 
 #endif

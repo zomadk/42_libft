@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: zomamaduekwe <zomamaduekwe@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/06 14:36:15 by zmaduekw          #+#    #+#              #
-#    Updated: 2020/03/10 14:39:50 by zmaduekw         ###   ########.fr        #
+#    Updated: 2020/08/03 13:36:55 by zomamaduekw      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRCS	= ft_memset.c ft_bzero.c	\
 		  ft_strnew.c ft_strdel.c ft_strclr.c		\
 		  ft_striter.c ft_striteri.c ft_strmap.c	\
 		  ft_strmapi.c ft_strequ.c ft_strnequ.c		\
-		  ft_strsub.c ft_strjoin.c  ft_strtrim.c	\
+		  ft_substr.c ft_strjoin.c  ft_strtrim.c	\
 		  ft_strsplit.c ft_itoa.c ft_putchar.c		\
 		  ft_putstr.c ft_putendl.c ft_putnbr.c		\
 		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c	\

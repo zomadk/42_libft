@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zomamaduekwe <zomamaduekwe@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 19:35:07 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/09 21:00:04 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/08/24 15:50:11 by zomamaduekw      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ char	*ft_strnew(size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char	**ft_strsplit(char const *s, char c);
-char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	**ft_split(char const *s, char c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);

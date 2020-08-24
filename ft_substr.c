@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zomamaduekwe <zomamaduekwe@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 13:49:19 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/02 19:48:51 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/08/24 15:49:06 by zomamaduekw      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sub;
-	size_t	i;
+    char    *sub;
+    size_t    i;
 
-	i = 0;
-	if (!(sub = malloc(sizeof(char) * len + 1)))
-		return (NULL);
-	while (s[i] && i < len)
-	{
-		sub[i] = s[start];
-		i++;
-		start++;
-	}
-	sub[i] = '\0';
-	return (sub);
+    i = 0;
+    if (!(s) || (long int)len < 0)
+      return NULL;
+    sub = malloc(sizeof(char) * len + 1);
+    if (sub == NULL)
+      return NULL;
+    while (start < strlen(s) && i < len)
+    {
+        sub[i] = s[start];
+        i++;
+        start++;
+    }
+    sub[i] = '\0';
+    return (sub);
 }

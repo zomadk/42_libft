@@ -3,32 +3,73 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zomamaduekwe <zomamaduekwe@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 16:16:28 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/09 20:47:18 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/08/24 17:05:32 by zomamaduekw      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static void		*ft_memalloc(size_t size)
 {
-	int		i;
-	int		k;
-	char	*space;
+    char *ptr;
 
-	i = 0;
-	k = 0;
-	if (!s)
-		return (NULL);
-	while (s[i] && ft_is_blank(s[i]))
-		i++;
-	k = ft_strlen(&s[i]) - 1;
-	while (s[i] && ft_is_blank(s[k + i]))
-		k--;
-	if (!(space = ft_strnew(k + 1)))
-		return (NULL);
-	ft_strncpy(space, &s[i], (k + 1));
-	return (space);
+    ptr = malloc(size);
+    if (ptr == NULL)
+        return (NULL);
+    ft_bzero(ptr, size);
+    return (ptr);
+}
+
+static char		*ft_strnew(size_t size)
+{
+    char *ptr;
+
+    ptr = ft_memalloc(sizeof(char) * size + 1);
+    return (ptr);
+}
+
+static int		ft_is_char(char s, char const *set)
+{
+    char const    *ptr;
+
+    ptr = set;
+    while (*ptr)
+    {
+        if (*ptr == s)
+            return (1);
+        ptr++;
+    }
+    ptr = set;
+    return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+    char        *str;
+    char        *ptr;
+    const char    *end;
+
+    if (s1 == NULL)
+        return (NULL);
+    while (*s1 && ft_space_character(*s1, set))
+        s1++;
+    if (!*s1)
+        return (ft_strnew(0));
+    end = (ft_strlen(s1) + s1 - 1);
+    while (ft_is_char(*end, set))
+        end--;
+    str = ft_strnew((end - s1) + 1);
+    if (str == NULL)
+        return (NULL);
+    ptr = str;
+    while (s1 <= end)
+    {
+        *str = (char)*s1;
+        str++;
+        s1++;
+    }
+    return (ptr);
 }

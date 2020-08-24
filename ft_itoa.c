@@ -3,14 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zomamaduekwe <zomamaduekwe@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 19:19:25 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/09 20:45:57 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/08/24 17:32:05 by zomamaduekw      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_checker(char *spot, int n, int len, int i)
+{
+	if (n < 10 && n >= 0)
+	{
+		spot[i] = n + '0';
+		i++;
+	}
+	if (n >= 10)
+	{
+		while (len-- && (n != 0))
+		{
+			spot[len] = (n % 10) + '0';
+			n = n / 10;
+		}
+	}
+	return (spot);
+}
+
+size_t	ft_nbrlen(int n)
+{
+	int	len;
+
+	len = 0;
+	if (n == 0)
+		return (1);
+	if (n < len)
+		len++;
+	while (n != 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {

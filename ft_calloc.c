@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/24 16:49:55 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/08/24 20:33:38 by zmaduekw         ###   ########.fr       */
+/*   Created: 2020/08/24 17:44:26 by zomamaduekw       #+#    #+#             */
+/*   Updated: 2020/08/24 20:30:39 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t			i;
-	unsigned char	*arr;
+	char	*ptr;
+	size_t	total_size;
 
-	i = 0;
-	arr = (unsigned char*)s;
-	while (i < n)
-	{
-		if (arr[i] == (unsigned char)c)
-			return (&arr[i]);
-		i++;
-	}
-	return (NULL);
+	total_size = count * size;
+	ptr = malloc(total_size);
+	if (!(ptr))
+		return (NULL);
+	ft_memset(ptr, 0, total_size);
+	return (ptr);
 }

@@ -3,61 +3,49 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zomamaduekwe <zomamaduekwe@student.42.f    +#+  +:+       +#+         #
+#    By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/03/06 14:36:15 by zmaduekw          #+#    #+#              #
-#    Updated: 2020/08/03 13:36:55 by zomamaduekw      ###   ########.fr        #
+#    Created: 2020/08/26 19:28:54 by zmaduekw          #+#    #+#              #
+#    Updated: 2020/08/26 19:52:50 by zmaduekw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC	= gcc
-CFLAGS	= -Wall -Wextra -Werror
-AR	= ar rcs
-RANLIB = ranlib
+CC = gcc
+NAME = libft.a
+CFLAGS = -Wall -Wextra -Werror -c
 
-NAME	= libft.a
-HEAD	= libft.h
-SRCS	= ft_memset.c ft_bzero.c	\
-		  ft_memcpy.c ft_memccpy.c	\
-		  ft_memmove.c ft_memchr.c	\
-		  ft_memcmp.c ft_strlen.c	\
-		  ft_strdup.c ft_strcpy.c	\
-		  ft_strncpy.c ft_strcat.c	\
-		  ft_strncat.c ft_strlcat.c	\
-		  ft_strchr.c ft_strrchr.c	\
-		  ft_strstr.c ft_strnstr.c	\
-		  ft_strcmp.c ft_strncmp.c ft_atoi.c		\
-		  ft_isalpha.c ft_isdigit.c ft_isalnum.c	\
-		  ft_isascii.c ft_isprint.c ft_toupper.c	\
-		  ft_tolower.c ft_memalloc.c ft_memdel.c	\
-		  ft_strnew.c ft_strdel.c ft_strclr.c		\
-		  ft_striter.c ft_striteri.c ft_strmap.c	\
-		  ft_strmapi.c ft_strequ.c ft_strnequ.c		\
-		  ft_substr.c ft_strjoin.c  ft_strtrim.c	\
-		  ft_strsplit.c ft_itoa.c ft_putchar.c		\
-		  ft_putstr.c ft_putendl.c ft_putnbr.c		\
-		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c	\
-		  ft_putnbr_fd.c ft_nbrlen.c ft_wordcount.c \
-		  ft_wordlen.c ft_is_blank.c ft_checker.c 
+SOURCES	= ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
+										ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
+										ft_strchr.c ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c \
+										ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
+										ft_memchr.c ft_memcmp.c ft_strdup.c ft_calloc.c ft_itoa.c \
+										ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+										ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c
 
-OBJS	= $(SRCS:.c=.o)
+SOURCES_B = ft_lstsize.c ft_lstlast.c ft_lstadd_front.c ft_lstadd_back.c \
+											ft_lstnew.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-.PHONY: all clean fclean re
+OBJETS = $(SOURCES:%.c=%.o)
+OBJECTS_B = $(SOURCES_B:%.c=%.o)
+INCLUDES=./
 
 all: $(NAME)
-
 $(NAME):
-	@$(CC) $(CFLAGS) -c $(SRCS)
-	@$(AR) $(NAME) $(OBJS)
-	@$(RANLIB) $(NAME)
-	@echo "[INFO] Library [$(NAME)] created!"
+	@$(CC) $(CFLAGS) $(SOURCES) -I$(INCLUDES)
+	@ar rc $(NAME) $(OBJETS)
+	@ranlib $(NAME)
+
+bonus:
+	@$(CC) $(CFLAGS) $(SOURCES_B)  -I$(INCLUDES)
+	@ar rc $(NAME) $(OBJECTS_B)
+	@ranlib $(NAME)
 
 clean:
-	@rm -f $(OBJS)
-	@echo "[INFO] Objects removed!"
+	@rm -f $(OBJETS) $(OBJECTS_B)
 
-fclean:
-	@rm -f $(NAME) $(OBJS)
-	@echo "[INFO] Library [$(NAME)] removed!"
+fclean: 	clean
+	@rm -f $(NAME)
 
 re: fclean all
+
+.PHONY:		all clean fclean re bonus

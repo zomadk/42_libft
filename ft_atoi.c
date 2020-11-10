@@ -3,23 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zomamaduekwe <zomamaduekwe@student.42.f    +#+  +:+       +#+        */
+/*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/30 20:21:34 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/06/06 20:58:28 by zomamaduekw      ###   ########.fr       */
+/*   Created: 2020/08/24 20:04:45 by zmaduekw          #+#    #+#             */
+/*   Updated: 2020/08/24 20:06:08 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <unistd.h>
 
 int		ft_atoi(const char *str)
 {
-	int i;
-	int res;
-	int sign;
-	char *s;
+	int		i;
+	int		res;
+	int		sign;
+	char	*s;
 
 	i = 0;
 	res = 0;
@@ -34,7 +32,7 @@ int		ft_atoi(const char *str)
 		i++;
 	}
 	else if (s[i] == '+')
-		i++;	
+		i++;
 	while (ft_isdigit(s[i]))
 	{
 		res = ((res * 10) + (s[i] - '0'));

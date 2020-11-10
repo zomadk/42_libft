@@ -6,13 +6,13 @@
 /*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 10:27:01 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/03/09 11:11:09 by zmaduekw         ###   ########.fr       */
+/*   Updated: 2020/09/16 12:56:04 by zmaduekw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
 	int i;
 

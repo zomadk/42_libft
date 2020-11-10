@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zomamaduekwe <zomamaduekwe@student.42.f    +#+  +:+       +#+        */
+/*   By: zmaduekw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 12:24:32 by zmaduekw          #+#    #+#             */
-/*   Updated: 2020/06/06 21:19:38 by zomamaduekw      ###   ########.fr       */
+/*   Created: 2020/08/24 20:09:37 by zmaduekw          #+#    #+#             */
+/*   Updated: 2020/11/04 21:16:44 by zmaduekw         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *b, size_t n)
+void ft_bzero(void *b, size_t n)
 {
 	unsigned char *ptr;
 
-	ptr = (unsigned char*)b;
+	ptr = (unsigned char *)b;
 	while (n-- > 0)
 		*(ptr++) = 0;
 }
